@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-townsend-gold: #FFBB00;
+  --color-bears-gold: #FFB703;
+  --color-bears-blue: #18272F;
+  --color-white: white;
+}
+
+html,
+body {
+  background-color: var(--color-bears-gold);
+  color: var(--color-white);
+}
+
+body {
+  background: linear-gradient(-45deg, #FFBB00, #fcad36, #FFBB00, #FCB836);
+  background-size: 400% 400%;
+  animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.cmoing-soon {
+  filter: drop-shadow(0 12px 16px rgb(0, 0, 0, .32));
+}
