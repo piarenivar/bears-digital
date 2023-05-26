@@ -1,6 +1,9 @@
 import '../styles/globals.css'
 import { poppins } from '@/styles/fonts'
 
+import Footer from '@/components/global/Footer'
+import Nav from '@/components/global/Nav'
+
 export const metadata = {
   title: 'Bears Digital | Empowering Brands with AI-Driven Creative & Strategic Digital Design & Development Solutions. ',
   description: 'Bears Digital Empowers Brands with AI-Driven Creative & Strategic Digital Design & Development Solutions.',
@@ -9,7 +12,11 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`h-screen flex justify-center items-center ${poppins.className}`}>{children}</body>
+      <body className={`h-screen flex flex-col items-center ${poppins.className}`}>
+        <Nav />
+        {children}
+        <Footer />
+      </body>
     </html>
   )
 }

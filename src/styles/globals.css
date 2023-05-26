@@ -14,7 +14,11 @@
   --color-townsend-gold: #FFBB00;
   --color-bears-gold: #FFB703;
   --color-bears-blue: #18272F;
+  --color-orange: #FB8500;
+  --color-orangered: orangered;
   --color-white: white;
+
+  --transition: all .2s ease-in-out;
 }
 
 html,
@@ -23,10 +27,14 @@ body {
   color: var(--color-white);
 }
 
-body {
+/* body {
   background: linear-gradient(-45deg, #FFBB00, #fcad36, #FFBB00, #FCB836);
   background-size: 400% 400%;
   animation: gradient 10s ease infinite;
+} */
+
+body {
+  overflow-x: hidden;
 }
 
 @keyframes gradient {
@@ -43,6 +51,269 @@ body {
   }
 }
 
-.cmoing-soon {
-  filter: drop-shadow(0 12px 16px rgb(0, 0, 0, .32));
+a {
+  transition: var(--transition);
+  width: fit-content;
+}
+
+.a-arrow {
+  position: relative;
+  top: 0;
+  margin-left: .75rem;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--color-white);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: var(--transition);
+}
+
+a:hover .a-arrow {
+  transform: translateX(0);
+}
+
+.border-r-white {
+  border-right: 1px solid var(--color-white);
+}
+
+.border-b-orange {
+  border-bottom: 1.5px solid var(--color-orange);
+}
+
+.border-r-orange {
+  border-right: 1.5px solid var(--color-orange);
+}
+
+.brand:hover {
+  opacity: .64;
+}
+
+.button-round {
+  border: 1px solid var(--color-white);
+  border-radius: 100rem;
+  padding: .1rem 1rem;
+}
+
+.button-round:hover {
+  background-color: var(--color-orangered);
+  border: 1px solid var(--color-orangered);
+
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0, .24));
+}
+
+.button-signature {
+  background: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+
+  margin-right: 1.5rem;
+  padding: .5rem .75rem;
+  position: relative;
+
+  height: 3rem;
+  width: fit-content;
+
+  transition: var(--transition);
+}
+
+.button-signature span {
+  position: relative;
+}
+
+.button-signature-large {
+  height: 4rem;
+}
+
+.button-signature::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 100rem;
+  background: var(--color-orange);
+  width: 3rem;
+  height: 3rem;
+  transition: all 0.3s ease;
+}
+
+.button-signature-large::before {
+  width: 4rem;
+  height: 4rem;
+}
+
+.button-signature svg {
+  position: relative;
+  top: 0;
+  margin-left: .75rem;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: var(--color-white);
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: var(--transition);
+}
+
+.button-signature-large svg {
+  margin-left: 1rem;
+}
+
+.button-signature:hover:before {
+  width: 100%;
+  background: var(--color-orangered);
+}
+
+.button-signature:hover svg {
+  transform: translateX(0);
+}
+
+.button-signature:active {
+  transform: scale(0.95);
+}
+
+.burger {
+  cursor: pointer;
+  height: 1.5rem;
+  width: 2rem;
+}
+
+.burger span {
+  background-color: var(--color-white);
+
+  position: relative;
+  transition: var(--transition);
+
+  height: 2px;
+  width: 100%;
+}
+
+.toggle span:nth-child(1) {
+  transform: rotate(45deg) translate(.5rem, .5rem);
+}
+
+.toggle span:nth-child(2) {
+  transform: translateX(-1rem);
+  opacity: 0;
+}
+
+.toggle span:nth-child(3) {
+  transform: rotate(-45deg) translate(.4rem, -.5rem);
+}
+
+.burger-links {
+  background-color: var(--color-bears-gold);
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0, .24));
+
+  position: fixed;
+  top: 0;
+  right: -66vw;
+  transition: all .5s ease-in-out;
+
+  height: 100vh;
+  width: 64vw;
+
+  z-index: 1;
+}
+
+.burger-slide {
+  right: 0;
+}
+
+#container-absolute-white {
+  background-color: var(--color-white);
+  color: var(--color-bears-blue);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 4rem 0;
+  position: absolute;
+  left: 0;
+
+  width: 100vw;
+}
+
+#container-absolute-white svg {
+  stroke: var(--color-bears-blue);
+}
+
+#container-absolute-white a:hover,
+#container-absolute-white a:hover svg {
+  color: var(--color-white);
+  stroke: var(--color-white);
+}
+
+.footer {
+  background-color: var(--color-bears-blue);
+}
+
+.footer hr {
+  background-color: var(--color-white);
+  border: none;
+
+  height: 1px;
+  width: 100%;
+}
+
+.footer a:not(.brand) {
+  opacity: .64;
+}
+
+.footer a:hover:not(.brand) {
+  opacity: 1;
+}
+
+.hover-underline {
+  background-color: transparent;
+  background-image: linear-gradient(var(--color-white), var(--color-white));
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  background-size: 0% 1.5px;
+
+  /* padding-bottom: 1px; */
+}
+
+.hover-underline:hover {
+  background-size: 100% 1.5px;
+}
+
+#quad a {
+  color: var(--color-orange);
+}
+
+#quad a:hover {
+  background-color: var(--color-orange);
+  color: var(--color-white);
+}
+
+#quadResponsive div:not(#quadResponsive div:last-child) {
+  border-right: 1.5px solid var(--color-orange);
+}
+
+#quadResponsive a:hover {
+  color: var(--color-orange);
+}
+
+.navbar {
+  border-bottom: 1px solid var(--color-white);
+}
+
+.text-hr-white {
+  background-color: var(--color-white);
+  margin-right: 1rem;
+
+  height: 2px;
+  width: 3rem;
+}
+
+.text-hr-blue {
+  background-color: var(--color-bears-blue);
+  margin-right: 1rem;
+
+  height: 2px;
+  width: 3rem;
 }
