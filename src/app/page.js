@@ -1,7 +1,7 @@
 import styles from '../styles/modules/Home.module.css'
+import OrangeFill from '@/components/buttons/OrangeFill'
 import Quad from '@/components/global/Quad'
 import QuadResponsive from '@/components/global/QuadResponsive'
-import Signature from "@/components/buttons/Signature"
 import SignatureLarge from "@/components/buttons/SignatureLarge"
 import Image from 'next/image'
 import Link from "next/link"
@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id='container-absolute-white' className='h-[64rem] space-y-16'>
+      <section id='container-absolute-white' className='h-[64rem]'>
         <section className='container flex justify-between'>
           <div className='w-1/2 flex justify-center items-center'>
             <Quad linkOne='web' textOne='Web Development' linkTwo='ios' textTwo='iOS Development' linkThree='brand' textThree='Brand Identity' linkFour='strategy' textFour='Strategy' />
@@ -43,13 +43,14 @@ export default function Home() {
           <div className='w-1/2 flex justify-center items-center'>
             <div className='w-4/5 h-fit space-y-6 max-xl:w-full'>
               <h2 className='text-3xl font-semibold'>Leverage A Digital Advantage</h2>
-              <p className='text-lg pb-4'>Empower Your Growth and Innovation with Us. Enabling the Full Potential of Your Brand, we seamlessly integrate captivating designs, powerful technology, and personalized strategies. Our unique approach positions your business as an industry leader, granting you a distinct advantage over competitors. Surpass the competition and leave your mark.</p>
-              <Signature link='contact' text='Discover Your Potential' />
+              <p className='text-lg pb-10'>Optimize Your Customer Engagement and Conversion Rate. We Enable the Full Potential of Your Brand by seamlessly integrating captivating designs, powerful technology, and personalized strategies to grow your business. Our unique approach positions your business as an industry leader, granting you a distinct advantage over your competition. Let us help you make your mark.</p>
+              <OrangeFill link='contact' text='Discover Your Potential' />
             </div>
           </div>
         </section>
+        <hr className='container hr-blue' />
         <section className='container flex flex-col space-y-8'>
-          <h2 className='text-3xl font-semibold flex items-center'><hr className='text-hr-blue' />Our Expertise</h2>
+          <h2 className='text-3xl font-semibold flex items-center'><hr className='text-hr-blue' />How We Help</h2>
           <QuadResponsive />
         </section>
       </section>

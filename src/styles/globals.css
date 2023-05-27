@@ -73,6 +73,22 @@ a:hover .a-arrow {
   transform: translateX(0);
 }
 
+.a-orange-fill {
+  background-color: var(--color-orange);
+  background-image: linear-gradient(var(--color-orangered), var(--color-orangered));
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  border-radius: 100rem;
+  color: var(--color-white);
+
+  padding: .5rem 1.5rem;
+}
+
+.a-orange-fill:hover {
+  background-size: 100% 100%;
+}
+
 .border-r-white {
   border-right: 1px solid var(--color-white);
 }
@@ -229,7 +245,9 @@ a:hover .a-arrow {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 
+  overflow-x: hidden;
   padding: 4rem 0;
   position: absolute;
   left: 0;
@@ -279,6 +297,11 @@ a:hover .a-arrow {
 
 .hover-underline:hover {
   background-size: 100% 1.5px;
+}
+
+.hr-blue {
+  border: none;
+  border-bottom: 1px solid rgb(24, 39, 47, .4);
 }
 
 #quad a {
