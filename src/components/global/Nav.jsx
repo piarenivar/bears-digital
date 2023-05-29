@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 export default function Nav() {
     return (
-        <nav className='navbar w-screen flex justify-center py-6'>
+        <nav className='border-b-gray w-screen flex justify-center py-6'>
             <div className='container flex justify-between'>
                 <Brand />
                 <div className='w-fit flex items-center space-x-12 text-lg max-lg:hidden'>

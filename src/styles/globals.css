@@ -11,9 +11,11 @@
 }
 
 :root {
-  --color-townsend-gold: #FFBB00;
   --color-bears-gold: #FFB703;
   --color-bears-blue: #18272F;
+  --color-bears-beige: #F5EBE0;
+  --color-charcoal-gray: #4D4D4D;
+  --color-light-gray: #B9B9B9;
   --color-orange: #FB8500;
   --color-orangered: orangered;
   --color-white: white;
@@ -23,15 +25,9 @@
 
 html,
 body {
-  background-color: var(--color-bears-gold);
+  background-color: var(--color-bears-blue);
   color: var(--color-white);
 }
-
-/* body {
-  background: linear-gradient(-45deg, #FFBB00, #fcad36, #FFBB00, #FCB836);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-} */
 
 body {
   overflow-x: hidden;
@@ -73,36 +69,48 @@ a:hover .a-arrow {
   transform: translateX(0);
 }
 
-.a-orange-fill {
-  background-color: var(--color-orange);
-  background-image: linear-gradient(var(--color-orangered), var(--color-orangered));
-  background-position: left;
-  background-repeat: no-repeat;
-  background-size: 0% 100%;
-  border-radius: 100rem;
-  color: var(--color-white);
-
-  padding: .5rem 1.5rem;
+.bg-bears-blue {
+  background-color: var(--color-bears-blue);
 }
 
-.a-orange-fill:hover {
-  background-size: 100% 100%;
+.bg-bears-beige {
+  background-color: var(--color-bears-beige);
 }
 
-.border-r-white {
-  border-right: 1px solid var(--color-white);
+.bg-bears-beige-gradient {
+  background-image: linear-gradient(to bottom, var(--color-bears-beige) 72%, var(--color-white) 28%);
+}
+
+.border-b-gray {
+  border-bottom: 1px solid var(--color-charcoal-gray);
 }
 
 .border-b-orange {
   border-bottom: 1.5px solid var(--color-orange);
 }
 
+.border-r-gray {
+  border-right: 1px solid var(--color-charcoal-gray);
+}
+
 .border-r-orange {
   border-right: 1.5px solid var(--color-orange);
 }
 
+.border-r-white {
+  border-right: 1px solid var(--color-white);
+}
+
+.border-t-gray {
+  border-top: 1px solid var(--color-charcoal-gray);
+}
+
 .brand:hover {
   opacity: .64;
+}
+
+button {
+  transition: var(--transition);
 }
 
 .button-round {
@@ -115,6 +123,19 @@ a:hover .a-arrow {
   background-color: var(--color-orangered);
   border: 1px solid var(--color-orangered);
 
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0, .24));
+}
+
+.button-orange-fill {
+  background-color: var(--color-orange);
+  border: 1px solid transparent;
+  border-radius: 100rem;
+  color: var(--color-white);
+}
+
+.button-orange-fill:hover {
+  background-color: var(--color-orangered);
+  border-color: var(--color-orangered);
   filter: drop-shadow(0 0 8px rgb(0, 0, 0, .24));
 }
 
@@ -238,35 +259,32 @@ a:hover .a-arrow {
   right: 0;
 }
 
-#container-absolute-white {
+.card {
   background-color: var(--color-white);
-  color: var(--color-bears-blue);
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-  overflow-x: hidden;
-  padding: 4rem 0;
-  position: absolute;
-  left: 0;
-
-  width: 100vw;
+  filter: drop-shadow(0 0 8px rgb(0, 0, 0, .24));
 }
 
-#container-absolute-white svg {
-  stroke: var(--color-bears-blue);
+.card:hover {
+  filter: drop-shadow(0 0 16px rgb(0, 0, 0, .24));
+  transform: scale(1.025);
 }
 
-#container-absolute-white a:hover,
-#container-absolute-white a:hover svg {
-  color: var(--color-white);
-  stroke: var(--color-white);
+.card div {
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.footer {
-  background-color: var(--color-bears-blue);
+.contentWrapper {
+  color: var(--color-orangered);
+}
+
+.contentWrapper a:not(.contentWrapper a:last-child) {
+  border-right: 1px solid var(--color-orangered);
+}
+
+.contentWrapper a:hover {
+  background-color: rgb(255, 69, 0, .06);
 }
 
 .footer hr {
@@ -291,8 +309,6 @@ a:hover .a-arrow {
   background-position: bottom left;
   background-repeat: no-repeat;
   background-size: 0% 1.5px;
-
-  /* padding-bottom: 1px; */
 }
 
 .hover-underline:hover {
@@ -304,12 +320,21 @@ a:hover .a-arrow {
   border-bottom: 1px solid rgb(24, 39, 47, .4);
 }
 
+.input-newsletter {
+  border-bottom: 1px solid var(--color-bears-blue)
+}
+
+.input-newsletter:focus {
+  border-bottom: 1px solid var(--color-orangered);
+  outline: none;
+}
+
 #quad a {
   color: var(--color-orange);
 }
 
 #quad a:hover {
-  background-color: var(--color-orange);
+  background-color: var(--color-orangered);
   color: var(--color-white);
 }
 
@@ -321,8 +346,30 @@ a:hover .a-arrow {
   color: var(--color-orange);
 }
 
-.navbar {
-  border-bottom: 1px solid var(--color-white);
+.quadDisplay {
+  border-radius: .5rem;
+}
+
+.quadDisplay:hover {
+  background-color: rgb(255, 255, 255, .04);
+}
+
+/* Font Color */
+
+.text-blue {
+  color: var(--color-bears-blue);
+}
+
+.text-gray {
+  color: var(--color-light-gray);
+}
+
+.text-gray-dark {
+  color: var(--color-charcoal-gray);
+}
+
+.text-orangered {
+  color: var(--color-orangered);
 }
 
 .text-hr-white {

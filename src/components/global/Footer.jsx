@@ -7,7 +7,7 @@ import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
     return (
-        <footer className='footer w-screen flex justify-center py-16'>
+        <footer className='footer border-t-gray w-screen flex justify-center py-16'>
             <div className='container flex justify-between'>
                 <div className='flex flex-col space-y-6'>
                     <Brand />
@@ -48,7 +48,3 @@ export default function Footer() {
         </footer>
     )
 }
-
-
-// <Link href='https://www.instagram.com/bearsdigitalco' target='_blank' className='flex items-center'><FontAwesomeIcon icon={faInstagram} className='w-6' /></Link>
-//                 <Link href='https://twitter.com/BearsDigitalCo' target='_blank' className='flex items-center'><FontAwesomeIcon icon={faTwitter} className='w-6' /></Link>

@@ -12,7 +12,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`h-screen flex flex-col items-center ${poppins.className}`}>
+      <body className={poppins.className}>
         <Nav />
         {children}
         <Footer />
