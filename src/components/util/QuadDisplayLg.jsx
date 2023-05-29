@@ -14,7 +14,7 @@ export default function QuadDisplayLg() {
 
 function Data({ description, header, href, hrefText, icon }) {
     return (
-        <Link href={`/${href}`} className='quadDisplay w-1/2 flex flex-col p-8 space-y-4'>
+        <Link href={`/${href}`} className='quadDisplay w-1/2 flex flex-col p-8 space-y-4 max-md:w-full'>
             <FontAwesomeIcon icon={icon} className='w-12' />
             <h3 className='text-2xl font-medium'>{header}</h3>
             <p className='text-gray pb-4'>{description}</p>

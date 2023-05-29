@@ -4,7 +4,7 @@ import Link from "next/link"
 
 export default function ContentWrapper() {
     return (
-        <div className='contentWrapper w-full flex justify-between text-center'>
+        <div className='contentWrapper w-full flex justify-between text-center max-md:flex-col'>
             {benefits.map(({ description, header, href, icon }) => {
                 return <Data key={href} description={description} header={header} href={href} icon={icon} />
             })}

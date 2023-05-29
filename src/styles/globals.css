@@ -241,7 +241,7 @@ button {
 }
 
 .burger-links {
-  background-color: var(--color-bears-gold);
+  background-color: var(--color-bears-blue);
   filter: drop-shadow(0 0 8px rgb(0, 0, 0, .24));
 
   position: fixed;
@@ -386,4 +386,11 @@ button {
 
   height: 2px;
   width: 3rem;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper a:not(.contentWrapper a:last-child) {
+    border-bottom: 1px solid var(--color-orangered);
+    border-right: none;
+  }
 }
