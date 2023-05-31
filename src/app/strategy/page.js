@@ -4,11 +4,11 @@ import ProjectsShowcase from '@/components/util/ProjectsShowcase'
 import RowsDataDisplay from '@/components/util/RowsDataDisplay'
 import SectionHeader from '@/components/global/SectionHeader'
 import Link from 'next/link'
-import { solutions } from '@/data/rowsDataDisplay/solutions'
+import { strategy } from '@/data/rowsDataDisplay/strategy'
 
 export default function Home() {
     const heroImg = {
-        backgroundImage: `url(https://images.unsplash.com/photo-1510074377623-8cf13fb86c08?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80)`,
+        backgroundImage: `url(https://images.unsplash.com/photo-1499750310107-5fef28a66643?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80)`,
     }
 
     return (
@@ -16,15 +16,15 @@ export default function Home() {
             <section id='hero' className='w-screen h-[50rem] flex justify-center items-end' style={heroImg}>
                 <div className='hero-overlay w-full h-[50rem]' />
                 <div className='z-10 container flex justify-center mb-16'>
-                    <a href='#solutions'><ArrowHover text='Solutions' /></a>
+                    <a href='#strategy'><ArrowHover text='Digital Strategy' /></a>
                 </div>
             </section>
             <section className='container flex flex-col pb-16 px-4 space-y-16'>
-                <section id='solutions' className='flex flex-col pt-16 space-y-6'>
-                    <SectionHeader text='Our Focus' />
-                    <p className='text-white-translucent w-1/2 text-2xl font-light leading-normal'>Our goal is simple: help businesses grow. In the modern age, every business needs a brand and an online presence. Our focus is to provide businesses with impeccable digital solutions to enhance their growth.</p>
-                    <h2 className='text-lg font-medium pt-12'>Solutions</h2>
-                    <RowsDataDisplay data={solutions} />
+                <section id='strategy' className='flex flex-col pt-16 space-y-6'>
+                    <SectionHeader text='Digital Strategy' />
+                    <p className='text-white-translucent w-1/2 text-2xl font-light leading-normal'>We&apos;re dedicated to propelling your business forward. Our experienced strategists will analyze your goals, industry landscape, and target audience to formulate a customized digital strategy that drives results. From effective marketing campaigns to optimal online presence, we&apos;ll guide you on the path to success and help your business grow.</p>
+                    <h2 className='text-lg font-medium pt-12'>Our Process</h2>
+                    <RowsDataDisplay data={strategy} />
                 </section>
                 <section id='approach' className='flex flex-col space-y-6'>
                     <SectionHeader text='Our Approach' />

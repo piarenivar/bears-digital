@@ -9,30 +9,29 @@ export default function Footer() {
     return (
         <footer className='footer border-t-gray w-screen flex justify-center py-16 px-4'>
             <div className='container flex justify-between max-md:flex-col-reverse'>
-                <div className='flex flex-col space-y-6 max-md:mt-12'>
+                <div className='flex flex-col space-y-12 max-md:mt-12'>
                     <Brand />
-                    <h2 className='text-4xl font-semibold leading-tight'>Elevate<br />Your Brand</h2>
-                    <p className='text-sm opacity-80'>© Bears Digital 2023</p>
+                    <h2 className='text-4xl leading-snug'>Elevate<br />Your Brand</h2>
+                    <p className='text-sm uppercase opacity-80'>© 2023 Bears Digital</p>
                 </div>
-                <div className='md:w-1/2 w-full flex justify-between text-sm'>
+                <div className='md:w-1/2 w-full flex justify-between text-sm uppercase'>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Company</h3>
                         <hr />
-                        <Link href='/about'>About</Link>
-                        <Link href='/contact'>Contact</Link>
-                        <Link href='/careers'>Careers</Link>
-                        <Link href='/solutions'>Solutions</Link>
-                        <Link href='/work'>Work</Link>
-                        <Link href='/newsletter'>Newsletter</Link>
-                        <Link href='/privacy'>Privacy Policy</Link>
+                        <Link href='/'>Home</Link>
+                        <Link href='/'>Solutions</Link>
+                        <Link href='/'>Projects</Link>
+                        <Link href='/'>Philosophy</Link>
+                        <Link href='/'>Connect</Link>
+                        <Link href='/'>Newsletter</Link>
+                        <Link href='/'>Privacy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Solutions</h3>
                         <hr />
                         <Link href='/solutions/web'>Web Development</Link>
-                        <Link href='/solutions/ios'>iOS Development</Link>
                         <Link href='/solutions/brand'>Brand Identity</Link>
-                        <Link href='/solutions/strategy'>Strategy</Link>
+                        <Link href='/solutions/strategy'>Digital Strategy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Follow Us</h3>

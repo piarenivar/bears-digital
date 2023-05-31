@@ -1,21 +1,36 @@
-import Brand from './Brand';
-import Burger from './burger';
-import Link from 'next/link';
+"use client";
+
+import ArrowHover from '../buttons/ArrowHover'
+import Brand from './Brand'
+import Link from 'next/link'
+import { useEffect, useState } from 'react'
 
 export default function Nav() {
+    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [visible, setVisible] = useState(true);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const isVisible = prevScrollPos > currentScrollPos;
+
+            setPrevScrollPos(currentScrollPos);
+            setVisible(isVisible);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, [prevScrollPos]);
+
     return (
-        <nav className='border-b-gray w-screen flex justify-center py-6 px-4'>
-            <div className='container flex justify-between'>
-                <Brand />
-                <div className='w-fit flex items-center space-x-12 text-lg max-lg:hidden'>
-                    <Link href='/solutions' className='hover-underline'>Solutions</Link>
-                    <Link href='/work' className='hover-underline'>Work</Link>
-                    {/* <Link href='/projects' className='hover-underline'>Projects</Link>
-                    <Link href='/case-studies' className='hover-underline'>Case Studies</Link> */}
-                    <Link href='/about' className='hover-underline'>About</Link>
-                    <Link href='/contact' className='button-round'>Contact</Link>
-                </div>
-                <Burger />
+        <nav id='navbar' className={`container flex justify-between py-6 px-4 z-10 ${!visible && 'nav-hidden'}`}>
+            <Brand />
+            <div className='nav-links flex flex-col items-end space-y-2'>
+                <Link href='/'><ArrowHover text='Home' /></Link>
+                <Link href='/solutions'><ArrowHover text='Solutions' /></Link>
+                <Link href='/projects'><ArrowHover text='Projects' /></Link>
+                <Link href='/philosophy'><ArrowHover text='Philosophy' /></Link>
+                <ArrowHover text='Connect' />
             </div>
         </nav>
     )
