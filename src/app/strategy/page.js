@@ -22,23 +22,17 @@ export default function Home() {
             <section className='container flex flex-col pb-16 px-8 space-y-16'>
                 <section id='strategy' className='flex flex-col pt-16 space-y-6'>
                     <SectionHeader text='Digital Strategy' />
-                    <p className='text-white-translucent w-4/5 text-2xl font-light leading-normal max-lg:w-full'>Our underlying commitment is to help your business grow. Our team of strategists dives deep into understanding your goals, industry landscape, and target audience. With this valuable insight, we&apos;ll create a tailored digital strategy that works for you. From impactful marketing campaigns that captivate your audience to establishing an optimal online presence, we provide comprehensive guidance. Leveraging the latest trends and data-driven analysis, we optimize your digital ecosystem to drive measurable results and sustainable growth. With our strategic guidance and continuous support, you can navigate the ever-evolving digital landscape with confidence, staying ahead of the competition and achieving your business objectives.</p>
-                    <h2 className='text-lg font-medium pt-12'>Our Process</h2>
+                    <p className='text-white-translucent w-4/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>Our underlying commitment is to help your business grow. Our team of strategists dives deep into understanding your goals, industry landscape, and target audience. With this valuable insight, we&apos;ll create a tailored digital strategy that works for you. From impactful marketing campaigns that captivate your audience to establishing an optimal online presence, we provide comprehensive guidance. Leveraging the latest trends and data-driven analysis, we optimize your digital ecosystem to drive measurable results and sustainable growth. With our strategic guidance and continuous support, you can navigate the ever-evolving digital landscape with confidence, staying ahead of the competition and achieving your business objectives.</p>
+                    <h2 className='text-lg font-medium pt-12'>Methodology</h2>
                     <RowsDataDisplay data={strategy} />
                 </section>
-                <section id='approach' className='flex flex-col space-y-6'>
+                <section className='flex flex-col space-y-6'>
                     <SectionHeader text='Our Approach' />
-                    <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full'>We understand that every business is unique, and we don&apos;t believe in a one-size-fits-all approach. Our process revolves around defining your distinct brand identity, and crafting tailored solutions that work effectively for your business.</p>
-                    <h2 className='text-lg font-medium pt-12'>Projects</h2>
-                    <ProjectsShowcase />
-                </section>
-                <section id='philosophy' className='flex flex-col space-y-6 pt-[5rem]'>
-                    <SectionHeader text='Our Philosophy' />
                     <div className='w-full flex justify-between max-lg:flex-col max-lg:space-y-6'>
-                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
+                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>We understand that every business is unique, and we don&apos;t believe in a one-size-fits-all approach. Our process revolves around defining your distinct brand identity, and crafting tailored solutions that work effectively for your business.</p>
                         <div className='w-fit flex flex-col items-end space-y-2 max-lg:ml-auto'>
                             <h3 className='text-lg font-medium'>See what we can do for you.</h3>
-                            <Link href='/'><ArrowHover text='Get In Touch' /></Link>
+                            <Link href='/connect'><ArrowHover text='Get In Touch' /></Link>
                         </div>
                     </div>
                 </section>

@@ -17,13 +17,13 @@ export default function Home() {
                 </div>
             </section>
             <section className='container flex flex-col pb-16 px-8 space-y-16'>
-                <section id='philosophy' className='flex flex-col space-y-6 pt-[5rem]'>
+                <section id='philosophy' className='flex flex-col space-y-6 pt-16'>
                     <SectionHeader text='Our Philosophy' />
                     <div className='w-full flex justify-between max-lg:flex-col max-lg:space-y-6'>
-                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
+                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>Bears Digital was founded with a simple purpose: to create digital solutions that transcend the ordinary. We are driven by an unwavering passion for crafting exceptional design and development solutions that enable our clients to scale their growth. Our commitment is to empower businesses in developing their brands to their fullest potential, while providing their customers with meaningful digital experiences. We take immense pride in our work, and we never settle for anything less than extraordinary.</p>
                         <div className='w-fit flex flex-col items-end space-y-2 max-lg:ml-auto'>
                             <h3 className='text-lg font-medium'>See what we can do for you.</h3>
-                            <Link href='/'><ArrowHover text='Get In Touch' /></Link>
+                            <Link href='/connect'><ArrowHover text='Get In Touch' /></Link>
                         </div>
                     </div>
                 </section>

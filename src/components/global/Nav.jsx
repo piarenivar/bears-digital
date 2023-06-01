@@ -30,7 +30,7 @@ export default function Nav() {
                 <Link href='/solutions'><ArrowHover text='Solutions' /></Link>
                 <Link href='/projects'><ArrowHover text='Projects' /></Link>
                 <Link href='/philosophy'><ArrowHover text='Philosophy' /></Link>
-                <ArrowHover text='Connect' />
+                <Link href='/connect'><ArrowHover text='Connect' /></Link>
             </div>
         </nav>
     )
