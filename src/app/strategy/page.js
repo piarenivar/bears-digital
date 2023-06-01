@@ -19,24 +19,24 @@ export default function Home() {
                     <a href='#strategy'><ArrowHover text='Digital Strategy' /></a>
                 </div>
             </section>
-            <section className='container flex flex-col pb-16 px-4 space-y-16'>
+            <section className='container flex flex-col pb-16 px-8 space-y-16'>
                 <section id='strategy' className='flex flex-col pt-16 space-y-6'>
                     <SectionHeader text='Digital Strategy' />
-                    <p className='text-white-translucent w-1/2 text-2xl font-light leading-normal'>We&apos;re dedicated to propelling your business forward. Our experienced strategists will analyze your goals, industry landscape, and target audience to formulate a customized digital strategy that drives results. From effective marketing campaigns to optimal online presence, we&apos;ll guide you on the path to success and help your business grow.</p>
+                    <p className='text-white-translucent w-4/5 text-2xl font-light leading-normal max-lg:w-full'>Our underlying commitment is to help your business grow. Our team of strategists dives deep into understanding your goals, industry landscape, and target audience. With this valuable insight, we&apos;ll create a tailored digital strategy that works for you. From impactful marketing campaigns that captivate your audience to establishing an optimal online presence, we provide comprehensive guidance. Leveraging the latest trends and data-driven analysis, we optimize your digital ecosystem to drive measurable results and sustainable growth. With our strategic guidance and continuous support, you can navigate the ever-evolving digital landscape with confidence, staying ahead of the competition and achieving your business objectives.</p>
                     <h2 className='text-lg font-medium pt-12'>Our Process</h2>
                     <RowsDataDisplay data={strategy} />
                 </section>
                 <section id='approach' className='flex flex-col space-y-6'>
                     <SectionHeader text='Our Approach' />
-                    <p className='text-white-translucent w-1/2 text-2xl font-light leading-normal'>We understand that every business is unique, and we don&apos;t believe in a one-size-fits-all approach. Our process revolves around defining your distinct brand identity, and crafting tailored solutions that work effectively for your business.</p>
+                    <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full'>We understand that every business is unique, and we don&apos;t believe in a one-size-fits-all approach. Our process revolves around defining your distinct brand identity, and crafting tailored solutions that work effectively for your business.</p>
                     <h2 className='text-lg font-medium pt-12'>Projects</h2>
                     <ProjectsShowcase />
                 </section>
                 <section id='philosophy' className='flex flex-col space-y-6 pt-[5rem]'>
                     <SectionHeader text='Our Philosophy' />
-                    <div className='w-full flex justify-between'>
-                        <p className='text-white-translucent w-1/2 text-2xl font-light leading-normal'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
-                        <div className='w-fit flex flex-col items-end space-y-2'>
+                    <div className='w-full flex justify-between max-lg:flex-col max-lg:space-y-6'>
+                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
+                        <div className='w-fit flex flex-col items-end space-y-2 max-lg:ml-auto'>
                             <h3 className='text-lg font-medium'>See what we can do for you.</h3>
                             <Link href='/'><ArrowHover text='Get In Touch' /></Link>
                         </div>

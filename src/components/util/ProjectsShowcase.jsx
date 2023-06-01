@@ -23,7 +23,7 @@ function Project({ header, href, src, text }) {
 
     return (
         <Link href={href} className='project-showcase w-2/5'>
-            <div className='w-full h-[40rem]' style={anchorImage} />
+            <div className='w-full h-[40rem] max-lg:h-[24rem]' style={anchorImage} />
             <h3 className='font-medium mt-6 mb-2'>{header}</h3>
             <p>{text}</p>
         </Link>

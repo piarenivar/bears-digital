@@ -16,12 +16,12 @@ export default function Home() {
                     <a href='#philosophy'><ArrowHover text='Philosophy' /></a>
                 </div>
             </section>
-            <section className='container flex flex-col pb-16 px-4 space-y-16'>
-                <section id='philosophy' className='flex flex-col space-y-6 pt-16'>
+            <section className='container flex flex-col pb-16 px-8 space-y-16'>
+                <section id='philosophy' className='flex flex-col space-y-6 pt-[5rem]'>
                     <SectionHeader text='Our Philosophy' />
-                    <div className='w-full flex justify-between'>
-                        <p className='text-white-translucent w-1/2 text-2xl font-light leading-normal'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
-                        <div className='w-fit flex flex-col items-end space-y-2'>
+                    <div className='w-full flex justify-between max-lg:flex-col max-lg:space-y-6'>
+                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
+                        <div className='w-fit flex flex-col items-end space-y-2 max-lg:ml-auto'>
                             <h3 className='text-lg font-medium'>See what we can do for you.</h3>
                             <Link href='/'><ArrowHover text='Get In Touch' /></Link>
                         </div>

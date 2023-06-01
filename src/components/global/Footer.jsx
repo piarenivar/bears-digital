@@ -7,7 +7,7 @@ import { faInstagram, faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 export default function Footer() {
     return (
-        <footer className='footer border-t-gray w-screen flex justify-center py-16 px-4'>
+        <footer className='footer border-t-gray w-screen flex justify-center py-16 px-8'>
             <div className='container flex justify-between max-md:flex-col-reverse'>
                 <div className='flex flex-col space-y-12 max-md:mt-12'>
                     <Brand />
@@ -19,19 +19,19 @@ export default function Footer() {
                         <h3 className='font-semibold'>Company</h3>
                         <hr />
                         <Link href='/'>Home</Link>
-                        <Link href='/'>Solutions</Link>
-                        <Link href='/'>Projects</Link>
-                        <Link href='/'>Philosophy</Link>
-                        <Link href='/'>Connect</Link>
-                        <Link href='/'>Newsletter</Link>
-                        <Link href='/'>Privacy</Link>
+                        <Link href='/solutions'>Solutions</Link>
+                        <Link href='/projects'>Projects</Link>
+                        <Link href='/philosophy'>Philosophy</Link>
+                        <Link href='/connect'>Connect</Link>
+                        <Link href='/newsletter'>Newsletter</Link>
+                        <Link href='/privacy'>Privacy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Solutions</h3>
                         <hr />
-                        <Link href='/solutions/web'>Web Development</Link>
-                        <Link href='/solutions/brand'>Brand Identity</Link>
-                        <Link href='/solutions/strategy'>Digital Strategy</Link>
+                        <Link href='/web'>Web Development</Link>
+                        <Link href='/brand'>Brand Identity</Link>
+                        <Link href='/strategy'>Digital Strategy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Follow Us</h3>

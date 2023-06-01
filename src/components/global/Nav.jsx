@@ -23,7 +23,7 @@ export default function Nav() {
     }, [prevScrollPos]);
 
     return (
-        <nav id='navbar' className={`container flex justify-between py-6 px-4 z-10 ${!visible && 'nav-hidden'}`}>
+        <nav id='navbar' className={`container flex justify-between py-6 px-8 z-10 ${!visible && 'nav-hidden'}`}>
             <Brand />
             <div className='nav-links flex flex-col items-end space-y-2'>
                 <Link href='/'><ArrowHover text='Home' /></Link>
