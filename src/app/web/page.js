@@ -22,7 +22,7 @@ export default function Home() {
             <section className='container flex flex-col pb-16 px-8 space-y-16'>
                 <section id='web' className='flex flex-col pt-16 space-y-6'>
                     <SectionHeader text='Web Design and Development' />
-                    <p className='text-white-translucent w-4/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>At Bears Digital, we believe that a website is more than just an online presence. It&apos;s a powerful tool to connect with your target audience, build credibility, and drive business growth. Our dedicated team of web development experts combines technical expertise and creative finesse to craft bespoke digital solutions tailored to your unique business needs. We go beyond aesthetics, focusing on optimizing user experiences, enhancing functionality, and maximizing conversions. Using cutting-edge technology and user-centric designs, we create seamless online experiences that captivate users, inspire engagement, and leave a lasting impression on your brand.</p>
+                    <p className='text-white-translucent w-4/5 text-2xl font-light leading-normal max-xl:w-4/5 max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>At Bears Digital, we believe that a website is more than just an online presence. It&apos;s a powerful tool to connect with your target audience, build credibility, and drive business growth. Our dedicated team of web development experts combines technical expertise and creative finesse to craft bespoke digital solutions tailored to your unique business needs. We go beyond aesthetics, focusing on optimizing user experiences, enhancing functionality, and maximizing conversions. Using cutting-edge technology and user-centric designs, we create seamless online experiences that captivate users, inspire engagement, and leave a lasting impression on your brand.</p>
                     <h2 className='text-lg font-medium pt-12'>Web Development Life Cycle</h2>
                     <RowsDataDisplay data={web} />
                 </section>
@@ -36,7 +36,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>
-                <Newsletter />
+                {/* <Newsletter /> */}
             </section>
         </main>
     )

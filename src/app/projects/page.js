@@ -1,9 +1,9 @@
 import ArrowHover from '@/components/buttons/ArrowHover'
 import Newsletter from '@/components/util/Newsletter'
 import ProjectsShowcase from '@/components/util/ProjectsShowcase'
-import RowsDataDisplay from '@/components/util/RowsDataDisplay'
 import SectionHeader from '@/components/global/SectionHeader'
 import Link from 'next/link'
+import { projects } from '@/data/projectsShowcase/projects'
 
 export default function Home() {
     const heroImg = {
@@ -21,21 +21,22 @@ export default function Home() {
             <section className='container flex flex-col pb-16 px-8 space-y-16'>
                 <section id='projects' className='flex flex-col pt-16 space-y-6'>
                     <SectionHeader text='Our Approach' />
-                    <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>At Bears Digital, we celebrate the uniqueness of every business. Our approach is centered around understanding your brand identity and crafting customized solutions that align with your goals. With our tailored approach, we deliver exceptional results that help our clients resonate with their target audience.</p>
+                    <p className='text-white-translucent w-3/5 text-2xl font-light leading-relaxed max-xl:w-4/5 max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>At Bears Digital, we celebrate the uniqueness of every business. Our approach is centered around understanding your brand identity and crafting customized solutions that align with your goals. With our tailored approach, we deliver exceptional results that help our clients resonate with their target audience.</p>
                     <h2 className='text-lg font-medium pt-12'>Projects</h2>
-                    <ProjectsShowcase />
+                    <hr className='hr border-t-gray pb-4' />
+                    <ProjectsShowcase  data={projects}/>
                 </section>
-                <section id='philosophy' className='flex flex-col space-y-6 pt-[5rem]'>
+                <section className='border-t-gray flex flex-col space-y-6 pt-16'>
                     <SectionHeader text='Our Philosophy' />
                     <div className='w-full flex justify-between max-lg:flex-col max-lg:space-y-6'>
-                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
+                        <p className='text-white-translucent w-3/5 text-2xl font-light leading-relaxed max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>At our core, we are fueled by a passion for creating exceptional design and development solutions. Mediocrity has no place in our work - we strive for nothing less than excellence. We are committed to helping businesses develop their brands to their fullest potential, while delivering unparalleled digital experiences to their customers.</p>
                         <div className='w-fit flex flex-col items-end space-y-2 max-lg:ml-auto'>
                             <h3 className='text-lg font-medium'>See what we can do for you.</h3>
                             <Link href='/connect'><ArrowHover text='Get In Touch' /></Link>
                         </div>
                     </div>
                 </section>
-                <Newsletter />
+                {/* <Newsletter /> */}
             </section>
         </main>
     )

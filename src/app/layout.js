@@ -5,7 +5,7 @@ import Footer from '@/components/global/Footer'
 import Nav from '@/components/global/Nav'
 
 export const metadata = {
-  title: 'Bears Digital | Helping Businesses Grow through Creative Digital Design and Development Solutions. ',
+  title: 'Bears Digital | Helping Businesses Grow through Creative Digital Design and Development Solutions.',
   description: 'Bears Digital Empowers Business Growth through Creative & Strategic Digital Design & Development Solutions.',
 }
 

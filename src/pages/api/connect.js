@@ -20,17 +20,21 @@ export default async function ConnectAPI(req, res) {
             from: user,
             to: 'connect@bearsdigital.io',
             replyTo: email,
-            subject: 'Bears Digital Contact',
+            subject: 'New Bears Digital Connection',
             html: `
-            <h1>New contact submission for Bears Digital</h1>
-            <ul>
-                <li>Name: ${name}</li>
-                <li>Phone: ${phone}</li>
-                <li>Email: ${email}</li>
-                <li>Subject: ${subject}</li>
-                <li>Message:</li>
-            </ul>
-            <p>${message}</p>`,
+            <div style="font-family: Arial, sans-serif; padding: 16px; background-color: #131415; color: #fff; width: 56%; height: fit-content;">
+                <span style="color: #A2A2A2; font-size: 12px; text-transform: uppercase; margin-bottom: 8px;">Bears Digital</span>
+                <h3 style="margin-bottom: 8px; color: #fff;">${subject}</h3>
+                <hr style="border: none; border-bottom: 1px solid rgba(255, 255, 255, .4); width: 100%; margin-bottom: 8px;">
+                <p style="margin-bottom: 8px; color: #fff;"><span style="color: #A2A2A2;">from:</span> ${name}, ${email}</p>
+                <p style="margin-bottom: 8px; color: #fff;"><span style="color: #A2A2A2;">reply-to:</span> ${email}</p>
+                <p style="margin-bottom: 8px; color: #fff;"><span style="color: #A2A2A2;">phone-number:</span> ${phone}</p>
+                <p style="margin-bottom: 8px; color: #fff;"><span style="color: #A2A2A2;">subject:</span> ${subject}</p>
+                <p style="margin-bottom: 256px; color: #fff;"><span style="color: #A2A2A2;">message:</span> ${message}</p>
+                <div style="width: 100%; text-align: end;">
+                    <span style="color: #A2A2A2; font-size: 12px; text-transform: uppercase;">© 2023 Bears Digital</span>
+                </div>
+            </div>`,
         })
 
         return res.status(200).json({ message: 'Your email was successfully sent.' })

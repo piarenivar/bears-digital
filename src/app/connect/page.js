@@ -17,7 +17,7 @@ export default function Home() {
             </section>
             <section className='container flex flex-col pb-16 px-8 space-y-16'>
                 <ConnectForm />
-                <Newsletter />
+                {/* <Newsletter /> */}
             </section>
         </main>
     )

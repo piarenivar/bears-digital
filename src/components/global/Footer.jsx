@@ -17,30 +17,31 @@ export default function Footer() {
                 <div className='md:w-1/2 w-full flex justify-between text-sm uppercase'>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Company</h3>
-                        <hr />
+                        <hr className='hr border-t-gray' />
                         <Link href='/'>Home</Link>
                         <Link href='/solutions'>Solutions</Link>
                         <Link href='/projects'>Projects</Link>
                         <Link href='/philosophy'>Philosophy</Link>
                         <Link href='/connect'>Connect</Link>
                         <Link href='/careers'>Careers</Link>
+                        <Link href='/newsletter'>Newsletter</Link>
                         <Link href='/privacy'>Privacy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Solutions</h3>
-                        <hr />
+                        <hr className='hr border-t-gray' />
                         <Link href='/web'>Web Development</Link>
                         <Link href='/brand'>Brand Identity</Link>
                         <Link href='/strategy'>Digital Strategy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>
                         <h3 className='font-semibold'>Follow Us</h3>
-                        <hr />
-                        <Link href='' target='_blank'>Facebook</Link>
+                        <hr className='hr border-t-gray' />
+                        {/* <Link href='' target='_blank'>Facebook</Link> */}
                         <Link href='https://www.instagram.com/bearsdigitalco/' target='_blank'>Instagram</Link>
                         <Link href='https://twitter.com/BearsDigitalCo' target='_blank'>Twitter</Link>
-                        <Link href='' target='_blank'>LinkedIn</Link>
-                        <Link href='' target='_blank'>Dribbble</Link>
+                        {/* <Link href='' target='_blank'>LinkedIn</Link> */}
+                        {/* <Link href='' target='_blank'>Dribbble</Link> */}
                     </div>
                 </div>
             </div>

@@ -1,14 +1,18 @@
 "use client";
 
 import ArrowHover from "../buttons/ArrowHover"
+import Loader from "./Loader";
 import SectionHeader from "../global/SectionHeader"
 import { useState } from "react";
 
 export default function ConnectForm() {
     const [success, setSuccess] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     const onSubmit = async (e) => {
         e.preventDefault();
+        setLoading(true)
+        setSuccess(false)
 
         const data = {
             name: String(e.target.name.value),
@@ -34,6 +38,7 @@ export default function ConnectForm() {
             e.target.subject.value = ''
             e.target.message.value = ''
             setSuccess(true)
+            setLoading(false)
         } else if (!response.ok) {
             console.log('Error sending message.')
         }
@@ -48,8 +53,8 @@ export default function ConnectForm() {
                 <input name='email' type='email' className='w-[48%] font-normal px-2 py-1 h-fit mb-6 max-sm:w-full' placeholder='Email' required />
                 <input name='subject' type='text' className='w-[48%] font-normal px-2 py-1 h-fit mb-6 max-sm:w-full' placeholder='Subject' />
                 <textarea name='message' className='w-full px-2 py-1 h-32 mb-6' placeholder='Enter your message.' minLength={10} required />
-                {success && <p className='text-sm text-green-600 max-sm:ml-auto max-sm:mb-6'>Your message was successfully sent!</p>}
-                <ArrowHover styles='ml-auto' text='Submit' type='submit' />
+                {success && <p className='success text-sm text-green-600 max-sm:ml-auto max-sm:mb-6'>Thanks for reaching out! We&apos;ll be in touch as soon as possible.</p>}
+                {loading ? <Loader styles='ml-auto' /> : <ArrowHover styles='ml-auto' text='Submit' type='submit' />}
             </form>
         </section>
     )

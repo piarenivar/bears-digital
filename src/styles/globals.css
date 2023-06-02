@@ -118,6 +118,44 @@ textarea:focus {
   border-bottom: 1px solid var(--color-white);
 }
 
+.loader {
+  width: 1.5rem;
+  transform-origin: center;
+  animation: rotate4 2s linear infinite;
+}
+
+.loader-inner {
+  fill: none;
+  stroke: var(--color-white-translucent);
+  stroke-width: 3;
+  stroke-dasharray: 1, 200;
+  stroke-dashoffset: 0;
+  stroke-linecap: round;
+  animation: dash4 1.5s ease-in-out infinite;
+}
+
+@keyframes rotate4 {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes dash4 {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 200;
+    stroke-dashoffset: -35px;
+  }
+
+  100% {
+    stroke-dashoffset: -125px;
+  }
+}
+
 #navbar {
   height: fit-content;
   position: fixed;
@@ -134,10 +172,10 @@ textarea:focus {
   transform: translateY(-100%);
 }
 
-.project-showcase:last-child {
+/* .project-showcase:last-child {
   position: relative;
   transform: translateY(5rem);
-}
+} */
 
 .project-showcase div {
   opacity: .64;
@@ -154,6 +192,20 @@ textarea:focus {
 
 .row-solution:hover {
   background-color: rgb(255, 255, 255, .04);
+}
+
+.success {
+  animation-name: fadeAway;
+  animation-duration: 1s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+
+  transition: var(--transition);
+}
+
+@keyframes fadeAway {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
 }
 
 textarea {
