@@ -23,7 +23,7 @@ export default function Footer() {
                         <Link href='/projects'>Projects</Link>
                         <Link href='/philosophy'>Philosophy</Link>
                         <Link href='/connect'>Connect</Link>
-                        <Link href='/newsletter'>Newsletter</Link>
+                        <Link href='/careers'>Careers</Link>
                         <Link href='/privacy'>Privacy</Link>
                     </div>
                     <div className='flex flex-col space-y-4'>

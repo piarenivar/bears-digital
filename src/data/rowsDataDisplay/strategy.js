@@ -22,7 +22,7 @@ export const strategy = [
     {
         header: '05. Content Planning and Creation',
         href: 'strategy',
-        text: 'We develop a content strategy that aligns with your brand and resonates with your audience. This involves creating engaging and relevant content across various platforms, such as websites, blogs, social media, and email marketing.',
+        text: 'We develop a content strategy that aligns with your brand and resonates with your audience. This involves creating engaging and relevant content across various platforms, such as websites, blogs, social media, paid advertising and email marketing.',
     },
     {
         header: '06. Implementation and Execution',

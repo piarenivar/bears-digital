@@ -9,7 +9,7 @@ import { solutions } from '@/data/rowsDataDisplay/solutions'
 
 export default function Home() {
   const heroImg = {
-    backgroundImage: `url(https://images.unsplash.com/photo-1519658422992-0c8495f08389?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2055&q=80)`,
+    backgroundImage: `url(https://images.unsplash.com/photo-1605859465655-84c45e14a0af?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1771&q=80)`,
   }
 
   return (
@@ -28,7 +28,7 @@ export default function Home() {
       <section className='container flex flex-col pb-16 px-8 space-y-16'>
         <section id='explore' className='flex flex-col pt-16 space-y-6'>
           <SectionHeader text='Our Focus' />
-          <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>Our goal is simple: help businesses grow. In the modern age, every business needs a brand and an online presence. Our focus is to provide businesses with impeccable digital solutions to enhance their growth.</p>
+          <p className='text-white-translucent w-3/5 text-2xl font-light leading-normal max-lg:w-full max-sm:text-xl max-sm:leading-relaxed'>Our goal is simple: help businesses grow. In the modern age, every business needs a brand and an online presence. Our focus is to provide businesses with impeccable digital solutions that enhance their growth.</p>
           <h2 className='text-lg font-medium pt-12'>Solutions</h2>
           <RowsDataDisplay data={solutions} />
         </section>

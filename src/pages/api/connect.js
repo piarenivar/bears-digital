@@ -18,7 +18,7 @@ export default async function ConnectAPI(req, res) {
     try {
         const mail = await transporter.sendMail({
             from: user,
-            to: user,
+            to: 'connect@bearsdigital.io',
             replyTo: email,
             subject: 'Bears Digital Contact',
             html: `
